@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Escape Game - Enigme Finale</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Enigme Finale</h1>
+  <p>Quel mot ouvre le coffre du dragon ?</p>
+  <input type="text" id="answer" placeholder="Votre réponse ici">
+  <br>
+  <button onclick="checkAnswer()">Valider</button>
+
+  <script>
+    function checkAnswer() {
+      const response = document.getElementById("answer").value.toLowerCase().trim();
+      if (response === "dragon") {
+        window.location.href = "document_secret.pdf";
+      } else {
+        alert("Mauvaise réponse... Le coffre reste fermé !");
+      }
+    }
+  </script>
+</body>
+</html>
